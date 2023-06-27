@@ -1,9 +1,10 @@
 from django.urls import path
-from . import views
+from .views import HomeView
+from api.views import AddListing
 
 app_name = 'core'
 
 urlpatterns = [
-    path('', views.HomeView.as_view(), name='home'),
-    # Add more URL patterns here
+    path('', HomeView.as_view(), name='home'),
+    path('add-listing/', AddListing.as_view(), name='add-listing'),
 ]

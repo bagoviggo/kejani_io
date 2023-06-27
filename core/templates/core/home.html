@@ -1,0 +1,24 @@
+<!-- core/home.html -->
+
+{% extends './base.html' %}
+
+{% block content %}
+  <h1>Welcome to Kejani</h1>
+  <p>Discover your dream property!</p>
+
+  <!-- Add Property Button -->
+  <a href="{% url 'core:add_listing' %}" class="btn btn-primary">Add Property</a>
+
+  <!-- Property Listings -->
+  {% for property in properties %}
+    <div class="property">
+      <h2>{{ property.title }}</h2>
+      <p>{{ property.description }}</p>
+      <p>Price: {{ property.price }}</p>
+      <p>City: {{ property.city }}</p>
+      <p>Category: {{ property.category }}</p>
+    </div>
+  {% empty %}
+    <p>No property listings available.</p>
+  {% endfor %}
+{% endblock %}

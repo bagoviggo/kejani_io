@@ -29,5 +29,13 @@ class Property(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     city = models.CharField(max_length=100, choices=CITY_CHOICES)
     category = models.CharField(max_length=1, choices=CATEGORY_CHOICES)
+
     def __str__(self):
-        return self.name
+        return self.title
+
+class PropertyListing(models.Model):
+    property = models.ForeignKey(Property, on_delete=models.CASCADE)
+    # Add more fields for the property listing as needed
+
+    def __str__(self):
+        return self.property.title
