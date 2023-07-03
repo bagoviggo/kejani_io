@@ -1,14 +1,11 @@
 bedroom_choices = {
+
+  '0':'Bedsitter/Studio', 
   '1':1,
   '2':2,
   '3':3,
   '4':4,
-  '5':5,
-  '6':6,
-  '7':7,
-  '8':8,
-  '9':9,
-  '10':10
+  '5':5
   }
 
 price_choices = {
@@ -24,7 +21,7 @@ price_choices = {
   '1000000':'$1M+',
 }
 
-state_choices = {
+county_choices = {
 
     "Baringo" : "BAR",
     "Bomet" : "BMT",

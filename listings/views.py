@@ -60,7 +60,7 @@ def search(request):
       queryset_list = queryset_list.filter(price__lte=price)
 
   context = {
-    'state_choices': state_choices,
+    'county_choices': county_choices,
     'bedroom_choices': bedroom_choices,
     'price_choices': price_choices,
     'listings': queryset_list,

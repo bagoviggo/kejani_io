@@ -21,7 +21,7 @@
               <div class="form-row">
                 <div class="col-md-4 mb-3">
                   <label class="sr-only">Keywords</label>
-                  <input type="text" name="keywords" class="form-control" placeholder="Keyword (Pool, Garage, etc)">
+                  <input type="text" name="keywords" class="form-control" placeholder="Keyword (WiFi, Parking, etc)">
                 </div>
 
                 <div class="col-md-4 mb-3">
@@ -32,9 +32,9 @@
                 <div class="col-md-4 mb-3">
                   <label class="sr-only">State</label>
                   <select name="state" class="form-control">
-                    <option selected="true" disabled="disabled">State (All)</option>
+                    <option selected="true" disabled="disabled">County (All)</option>
                     {% for key,value in state_choices.items %}
-                      <option value="{{ key }}">{{ value }}</option>
+                      <option value="{{ value }}">{{ key }}</option>
                     {% endfor %}
                   </select>
                 </div>
@@ -90,14 +90,14 @@
                   <div class="listing-heading text-center">
                     <h4 class="text-primary">{{ listing.title }}</h4>
                     <p>
-                      <i class="fas fa-map-marker text-secondary"></i> {{ listing.city }} {{ listing.state }}, {{ listing.zipcode }}</p>
+                      <i class="fas fa-map-marker text-secondary"></i> {{ listing.city }} {{ listing.county }}, {{ listing.zipcode }}</p>
                   </div>
                   <hr>
                   <div class="row py-2 text-secondary">
                     <div class="col-6">
                       <i class="fas fa-th-large"></i> Sqft: {{ listing.sqft }}</div>
                     <div class="col-6">
-                      <i class="fas fa-car"></i> Garage: {{ listing.garage }}</div>
+                      <i class="fas fa-car"></i> Parking: {{ listing.parking }}</div>
                   </div>
                   <div class="row py-2 text-secondary">
                     <div class="col-6">
