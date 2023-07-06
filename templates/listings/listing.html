@@ -96,7 +96,7 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item text-secondary">
                   <i class="fas fa-money-bill-alt"></i> Asking Price:
-                  <span class="float-right">${{ listing.price | intcomma }}</span>
+                  <span class="float-right">Ksh {{ listing.price | intcomma }}</span>
                 </li>
                 <li class="list-group-item text-secondary">
                   <i class="fas fa-bed"></i> Bedrooms:
@@ -107,8 +107,8 @@
                   <span class="float-right">{{ listing.bathrooms }}</span>
                 </li>
                 <li class="list-group-item text-secondary">
-                  <i class="fas fa-car"></i> Garage:
-                  <span class="float-right">{{ listing.garage }}
+                  <i class="fas fa-car"></i> Parking:
+                  <span class="float-right">{{ listing.parking }}
                   </span>
                 </li>
               </ul>
@@ -118,11 +118,6 @@
                 <li class="list-group-item text-secondary">
                   <i class="fas fa-th-large"></i> Square Feet:
                   <span class="float-right">{{ listing.sqft }}</span>
-                </li>
-                <li class="list-group-item text-secondary">
-                  <i class="fas fa-square"></i> Lot Size:
-                  <span class="float-right">{{ listing.lot_size }} Acres
-                  </span>
                 </li>
                 <li class="list-group-item text-secondary">
                   <i class="fas fa-calendar"></i> Listing Date:

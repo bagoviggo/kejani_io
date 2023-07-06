@@ -20,7 +20,7 @@ The Kejani project is developed to address the challenges and requirements of ho
 
 To get started with the Kejani project, follow these steps:
 
-1. Clone the project repository from [GitHub](https://github.com/your-username/kejani-project).
+1. Clone the project repository from [GitHub](https://github.com/your-username/kejani-project). `git clone https://github.com/bagoviggo/kejani_io.git`
 
 2. Install the required dependencies by running `pip install -r requirements.txt`.
 

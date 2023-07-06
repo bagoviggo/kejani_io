@@ -30,10 +30,10 @@
                 </div>
 
                 <div class="col-md-4 mb-3">
-                  <label class="sr-only">State</label>
-                  <select name="state" class="form-control">
+                  <label class="sr-only">County</label>
+                  <select name="county" class="form-control">
                     <option selected="true" disabled="disabled">County (All)</option>
-                    {% for key,value in state_choices.items %}
+                    {% for key,value in county_choices.items %}
                       <option value="{{ value }}">{{ key }}</option>
                     {% endfor %}
                   </select>
@@ -83,7 +83,7 @@
                 <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
                 <div class="card-img-overlay">
                   <h2>
-                    <span class="badge badge-secondary text-white">${{ listing.price | intcomma }}</span>
+                    <span class="badge badge-primary text-white">Ksh {{ listing.price | intcomma }}</span>
                   </h2>
                 </div>
                 <div class="card-body">

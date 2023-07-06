@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
-from .choices import price_choices, bedroom_choices, state_choices
+from .choices import price_choices, bedroom_choices, county_choices
 
 from .models import Listing
 
@@ -41,11 +41,11 @@ def search(request):
     if city:
       queryset_list = queryset_list.filter(city__iexact=city)
 
-  # State
-  if 'state' in request.GET:
-    state = request.GET['state']
-    if state:
-      queryset_list = queryset_list.filter(state__iexact=state)
+  # County
+  if 'county' in request.GET:
+    county = request.GET['county']
+    if county:
+      queryset_list = queryset_list.filter(county__iexact=county)
 
   # Bedrooms
   if 'bedrooms' in request.GET:
