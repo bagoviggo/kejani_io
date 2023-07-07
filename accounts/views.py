@@ -59,6 +59,23 @@ def register(request):
 
 
 def login(request):
+    """
+    Handle user login.
+
+    If the request method is POST, this function processes the user login form
+    and authenticates the user. If the credentials are valid, the user is logged in
+    and redirected to the 'dashboard' page. Otherwise, appropriate error messages
+    are displayed to the user.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: If the request method is POST and the user credentials are valid,
+        redirects to the 'dashboard' URL. Otherwise, renders the 'accounts/login.html'
+        template.
+    """
+    
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -77,6 +94,19 @@ def login(request):
 
 
 def logout(request):
+    """
+    Handle user logout.
+
+    If the request method is POST, this function logs out the user and displays a
+    success message. The user is then redirected to the 'index' page.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: Always redirects to the 'index' URL.
+    """
+    
     if request.method == 'POST':
         auth.logout(request)
         messages.success(request, 'You are now logged out')
@@ -84,6 +114,20 @@ def logout(request):
 
 
 def dashboard(request):
+    """
+    Render the user dashboard.
+
+    This function retrieves the contacts associated with the logged-in user and
+    renders the 'accounts/dashboard.html' template with the contacts data.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: Renders the 'accounts/dashboard.html' template with the
+        user_contacts data.
+    """
+    
     user_contacts = Contact.objects.order_by('-contact_date').filter(user_id=request.user.id)
 
     context = {
