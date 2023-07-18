@@ -2,6 +2,9 @@
 
 Welcome to the Kejani project! This project aims to develop a house hunting website where we guide people on their quest for a home. The project is built using Django, JavaScript, and other web technologies.
 
+### Kejani Inspiration
+  Kejani was born out of my desire to simplify the property search experience and overcome the overwhelming process of finding the perfect home. I wanted to create a user-friendly platform that connects home seekers with their dream properties effortlessly.
+
 ## Project Description
 
 The Kejani project is developed to address the challenges and requirements of house hunting. It provides a user-friendly interface for users to search for homes, view property details, and connect with real estate agents. The project includes the following features:
