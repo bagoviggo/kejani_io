@@ -21,7 +21,7 @@ def register(request):
         template.
     """
     if request.method == 'POST':
-        # Get form values
+        """ Get form values"""
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
         username = request.POST['username']

@@ -10,7 +10,7 @@
       <div class="row text-center">
         <div class="col-md-12">
           <h1 class="display-4">Browse Our Properties</h1>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+          <p class="lead">Discover your perfect home or investment opportunity!</p>
         </div>
       </div>
     </div>
@@ -42,21 +42,27 @@
                 <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
                 <div class="card-img-overlay">
                   <h2>
-                    <span class="badge badge-secondary text-white">Ksh{{ listing.price | intcomma }}</span>
+                    <span class="badge badge-secondary text-white">Ksh {{ listing.price | intcomma }}</span>
                   </h2>
                 </div>
                 <div class="card-body">
                   <div class="listing-heading text-center">
                     <h4 class="text-primary">{{ listing.title }}</h4>
                     <p>
-                      <i class="fas fa-map-marker text-secondary"></i> {{ listing.city }} {{ listing.county }}</p>
+                      <i class="fas fa-map-marker text-secondary"></i> {{ listing.address }} {{ listing.city }}</p>
                   </div>
                   <hr>
                   <div class="row py-2 text-secondary">
                     <div class="col-6">
                       <i class="fas fa-th-large"></i> Sqft: {{ listing.sqft }}</div>
                     <div class="col-6">
-                      <i class="fas fa-car"></i> Garage: {{ listing.garage }}</div>
+                      <i class="fas fa-car"></i> Parking:
+                      {% if listing.parking %}
+                        <i class="fas fa-check"></i>
+                      {% else %}
+                        <i class="fas fa-times"></i>
+                      {% endif %} 
+                    </div>
                   </div>
                   <div class="row py-2 text-secondary">
                     <div class="col-6">
