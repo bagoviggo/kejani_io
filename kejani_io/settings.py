@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'kejani_io.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mykejani_db',
-        'USER': 'kejani_test_db',
-        'PASSWORD': 'leonikokwakej@',
+        'NAME': 'kejani_db',
+        'USER': 'kejani_web_db',
+        'PASSWORD': 'Kej@ni2024',
         'HOST': 'localhost',
         'PORT': '3306',
     }
